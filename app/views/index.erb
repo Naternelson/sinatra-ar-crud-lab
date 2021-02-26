@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <main class="container">
+            <div class="center-align"><span>All Articles</span</div>
+            <ul class="collapsible" id="main">
+                <% @articles.each do |a| %>
+                    <li>
+                        <div class="collapsible-header"><%=a.title%></div>
+                        <div class="collapsible-body"><%=a.content%></div>
+                    </li>
+                <% end %>
+            </ul>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.getElementById('main')
+                var instances = M.Collapsible.init(elems);
+            });
+        </script>
+    </body>
+</html>
+      

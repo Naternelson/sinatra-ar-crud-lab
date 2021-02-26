@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <main class="container">
+            <div class="center-align"><h2><%=@article.title.split(/ |\_/).map(&:capitalize).join(" ")%></h2</div>
+            <p class="flow-text"><%=@article.content%></p>
+            <form method="POST" action=<%="/articles/#{@article.id}"%>>
+                <button class="btn waves-effect waves-light" type="submit">delete article</button>
+                <input id="hidden" type="hidden" name="_method" value="DELETE">
+            </form>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        </script>
+    </body>
+</html>

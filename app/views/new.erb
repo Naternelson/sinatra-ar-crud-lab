@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <main class="container">
+            <div class="center-align"><h1>Add New Article</h1></div>
+            <form action="/articles" method='POST'>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" name="title" id="title">
+                        <label for="title">Title</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea class="materialize-textarea" name="content" id="content"></textarea>
+                        <label for="content">Content</label>
+                    </div>
+                </div>
+                <div class="center-align"><button class="btn waves-effect waves-light" type="submit">Add</button></div>
+            </form>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>
